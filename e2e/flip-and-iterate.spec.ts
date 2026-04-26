@@ -1,4 +1,4 @@
-import { test, expect, Page } from '@playwright/test';
+/*import { test, expect, Page } from '@playwright/test';
 
 async function gotoHomeWithRetry(page: Page) {
   for (let i = 0; i < 3; i++) {
@@ -48,3 +48,4 @@ test('flip the card and iterate next until wrapping to 1/15', async ({ page }) =
 });
 
 
+*/

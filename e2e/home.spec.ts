@@ -8,7 +8,7 @@ await page.goto('/');
 console.log(await page.title());
 
 // Validate title (adjust if needed)
-await expect(page).toHaveTitle(/ign in - Jenkins/i);
+await expect(page).toHaveTitle(/Sign in - Jenkins/i);
 
 // Wait for login form elements instead of counter/next-btn
 await expect(page.locator('#j_username')).toBeVisible();
