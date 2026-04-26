@@ -2,9 +2,9 @@
 import { defineConfig, devices } from '@playwright/test';
 
 // Only baseURL is overridable; defaults to localhost:8080
-const baseURL = process.env.E2E_BASE_URL || 'http://localhost:8080';
+const baseURL = process.env.E2E_BASE_URL || 'http://localhost:5000';
 const slowMo = process.env.SLOW_MO ? Number(process.env.SLOW_MO) : 0;
-const startLocalServer = baseURL === 'http://localhost:8080';
+const startLocalServer = baseURL === 'http://localhost:5000';
 
 export default defineConfig({
   testDir: './e2e',
