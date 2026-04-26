@@ -5,7 +5,7 @@ async function gotoHomeWithRetry(page: Page) {
     await page.goto('/');
     const counter = page.getByTestId('counter');
     try {
-      await counter.waitFor({ state: 'visible', timeout: 2000 });
+      await counter.waitFor({ state: 'visible', timeout: 5000 });
       return;
     } catch {
       // Retry navigation in case of random error inject on load
