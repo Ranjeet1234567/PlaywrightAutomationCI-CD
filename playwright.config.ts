@@ -31,7 +31,8 @@ export default defineConfig({
   ],
   webServer: startLocalServer
     ? {
-        command: 'npm run dev -- --host 127.0.0.1 --port 8080 --strictPort',
+        //command: 'npm run dev -- --host 127.0.0.1 --port 8080 --strictPort',
+        command: 'npm run dev -- --host 0.0.0.0 --port 8080 --strictPort',
         url: baseURL,
         reuseExistingServer: true,
         timeout: 120_000,
