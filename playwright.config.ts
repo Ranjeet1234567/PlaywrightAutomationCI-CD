@@ -2,9 +2,9 @@
 import { defineConfig, devices } from '@playwright/test';
 
 // Only baseURL is overridable; defaults to localhost:8080
-const baseURL = process.env.E2E_BASE_URL || 'http://localhost:5000';
+const baseURL = process.env.E2E_BASE_URL || 'http://localhost:8080';
 const slowMo = process.env.SLOW_MO ? Number(process.env.SLOW_MO) : 0;
-const startLocalServer = baseURL === 'http://localhost:5000';
+const startLocalServer = baseURL === 'http://localhost:8080';
 
 export default defineConfig({
   testDir: './e2e',
@@ -26,13 +26,13 @@ export default defineConfig({
   },
   projects: [
     { name: 'chromium', use: { ...devices['Desktop Chrome'] } },
-   // { name: 'firefox', use: { ...devices['Desktop Firefox'] } },
-   // { name: 'webkit', use: { ...devices['Desktop Safari'] } },
+    { name: 'firefox', use: { ...devices['Desktop Firefox'] } },
+    { name: 'webkit', use: { ...devices['Desktop Safari'] } },
   ],
   webServer: startLocalServer
     ? {
         //command: 'npm run dev -- --host 127.0.0.1 --port 8080 --strictPort',
-        command: 'npm run dev -- --host 0.0.0.0 --port 5000 --strictPort',
+        command: 'npm run dev -- --host 0.0.0.0 --port 8080 --strictPort',
         url: baseURL,
         reuseExistingServer: true,
         timeout: 120_000,
