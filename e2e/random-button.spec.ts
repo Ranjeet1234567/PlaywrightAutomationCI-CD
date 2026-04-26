@@ -1,4 +1,4 @@
-/*import { test, expect, Page } from '@playwright/test';
+import { test, expect, Page } from '@playwright/test';
 
 async function gotoHomeWithRetry(page: Page) {
   for (let i = 0; i < 3; i++) {
@@ -39,4 +39,3 @@ test('Random Card jumps to a non-sequential card (not 2/15 from 1/15)', async ({
 });
 
 
-*/
